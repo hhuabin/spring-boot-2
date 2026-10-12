@@ -6,11 +6,8 @@ import com.springboot2.modules.user.entity.UserInfo;
 import com.springboot2.modules.user.dto.UserInfoDTO;
 import com.springboot2.modules.user.service.UserInfoService;
 import com.springboot2.modules.user.vo.UserInfoVO;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.springboot2.modules.user.vo.UserNameVO;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author hhuabin
@@ -43,6 +40,25 @@ public class UserInfoController {
         }
 
         response.success(UserInfoVO.from(userInfo));
+        return response;
+    }
+
+    @GetMapping("/getUserNameById")
+    public BaseResponse<UserNameVO> getUserNameById(@RequestParam("userId") Long userId) {
+        BaseResponse<UserNameVO> response = new BaseResponse<>();
+
+        if (userId == null) {
+            response.error(ResultCode.PARAM_ERROR);
+            return response;
+        }
+
+        UserInfo userInfo = userInfoService.getById(userId);
+        if (userInfo == null) {
+            response.error(ResultCode.USER_NOT_FOUND);
+            return response;
+        }
+
+        response.success(UserNameVO.from(userInfo));
         return response;
     }
 }

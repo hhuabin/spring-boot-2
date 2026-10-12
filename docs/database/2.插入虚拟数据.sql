@@ -17,12 +17,12 @@ WITH RECURSIVE seq AS (
   SELECT n + 1 FROM seq WHERE n < 1000000
 )
 SELECT
-  CONCAT('user_', n + 0),                                        -- username 唯一
+  CONCAT('user_', n + 0),                                        -- user_name 唯一
   MD5(RAND()),                                                   -- password
   CONCAT('姓名', n + 0),                                         -- real_name
   CONCAT('1', LPAD(n + 0, 10, '0')),                             -- phone 唯一 (1+10位)
   DATE_SUB(CURDATE(), INTERVAL FLOOR(RAND()*365*30) DAY),        -- birthday
-  ELT(FLOOR(1 + RAND()*3), '0','1','2'),                         -- gender
+  ELT(FLOOR(1 + RAND()*3), 0,1,2),                               -- gender
   CONCAT('user', n + 0, '@example.com'),                         -- email
   CONCAT('某省某市某区某街道', n + 0, '号'),                     -- address
   CONCAT('https://cdn.example.com/avatar/', (n + 0) % 1000, '.png'), -- avatar
@@ -37,4 +37,3 @@ FROM seq;
 SET SESSION unique_checks = 1;
 SET SESSION foreign_key_checks = 1;
 SET SESSION cte_max_recursion_depth = 1000;
-

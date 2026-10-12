@@ -52,7 +52,7 @@ public class UserInfo {
     /**
      * 性别：0未知，1男，2女
      */
-    private String gender;
+    private Integer gender;
 
     /**
      * 邮箱
@@ -102,7 +102,7 @@ public class UserInfo {
     /**
      * 是否删除：0正常，1删除
      */
-    private String isDeleted;
+    private Integer isDeleted;
 
     public Long getUserId() {
         return userId;
@@ -152,11 +152,11 @@ public class UserInfo {
         this.birthday = birthday;
     }
 
-    public String getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 
@@ -232,11 +232,11 @@ public class UserInfo {
         this.updateTime = updateTime;
     }
 
-    public String getIsDeleted() {
+    public Integer getIsDeleted() {
         return isDeleted;
     }
 
-    public void setIsDeleted(String isDeleted) {
+    public void setIsDeleted(Integer isDeleted) {
         this.isDeleted = isDeleted;
     }
 }

@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `real_name`     VARCHAR(50)  NOT NULL DEFAULT '' COMMENT '真实姓名',
 	`phone`         VARCHAR(20)  NOT NULL DEFAULT '' COMMENT '手机号',
   `birthday`      DATE         DEFAULT NULL COMMENT '生日',
-	`gender`        CHAR(1)      NOT NULL DEFAULT '0' COMMENT '0未知1男2女',
+	`gender`        TINYINT      NOT NULL DEFAULT 2 COMMENT '0女1男2未知',
   `email`         VARCHAR(50)  NOT NULL DEFAULT '' COMMENT '邮箱',
   `address`       VARCHAR(255) NOT NULL DEFAULT '' COMMENT '地址',
 	`avatar`        VARCHAR(255) NOT NULL DEFAULT '' COMMENT '头像URL',
@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `last_login_ip`   VARCHAR(45) DEFAULT NULL COMMENT '最后登录IP',
   `create_time`   DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   `update_time`   DATETIME     NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  `is_deleted`    CHAR(1)      NOT NULL DEFAULT '0' COMMENT '0正常1删除',
+  `is_deleted`    TINYINT      NOT NULL DEFAULT 0 COMMENT '0正常1删除',
   PRIMARY KEY (`user_id`),
   UNIQUE KEY `uk_username` (`user_name`),
   UNIQUE KEY `uk_phone` (`phone`)
@@ -31,4 +31,3 @@ CREATE TABLE IF NOT EXISTS `user` (
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_0900_ai_ci
   COMMENT = '普通用户表';
-

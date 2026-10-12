@@ -17,7 +17,7 @@ public class UserInfoVO {
     private String realName;
     private String phone;
     private LocalDate birthday;
-    private String gender;
+    private Integer gender;
     private String email;
     private String address;
     private String avatar;
@@ -65,8 +65,8 @@ public class UserInfoVO {
     public LocalDate getBirthday() { return birthday; }
     public void setBirthday(LocalDate birthday) { this.birthday = birthday; }
 
-    public String getGender() { return gender; }
-    public void setGender(String gender) { this.gender = gender; }
+    public Integer getGender() { return gender; }
+    public void setGender(Integer gender) { this.gender = gender; }
 
     public String getEmail() { return email; }
     public void setEmail(String email) { this.email = email; }
