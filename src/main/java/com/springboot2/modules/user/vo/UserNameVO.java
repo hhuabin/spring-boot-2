@@ -1,12 +1,16 @@
 package com.springboot2.modules.user.vo;
 
 import com.springboot2.modules.user.entity.UserInfo;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * @author hhuabin
  * @description
  * @date 2026-10-12 15:34
  */
+@Getter
+@Setter
 public class UserNameVO {
 
     private String userName;
@@ -21,11 +25,4 @@ public class UserNameVO {
         return vo;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
 }

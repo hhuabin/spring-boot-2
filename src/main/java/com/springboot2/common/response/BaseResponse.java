@@ -1,6 +1,9 @@
 package com.springboot2.common.response;
 
 import com.springboot2.common.enums.ResultCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 /**
  * @description 公共返回参数对象
@@ -8,30 +11,27 @@ import com.springboot2.common.enums.ResultCode;
  * @date 2026-10-10 11:42
  * @param <T> 业务数据类型
  */
+@Getter
+@Setter
 public class BaseResponse<T> {
 
-    // 业务响应码
+    /** 业务响应码 */
     private int code;
 
-    // 响应消息
+    /** 响应消息 */
     private String message = "";
 
-    // 业务数据
+    /** 业务数据 */
     private T data;
 
-    // 无参构造
+
+    /** 构造方法 */
     public BaseResponse() {
     }
 
     public BaseResponse(int code, String message) {
         this.code = code;
         this.message = message;
-    }
-
-    public BaseResponse(int code, String message, T data) {
-        this.code = code;
-        this.message = message;
-        this.data = data;
     }
 
     public BaseResponse(ResultCode resultCode) {
@@ -41,6 +41,12 @@ public class BaseResponse<T> {
     public BaseResponse(ResultCode resultCode, T data) {
         this.code = resultCode.getCode();
         this.message = resultCode.getMessage();
+        this.data = data;
+    }
+
+    public BaseResponse(int code, String message, T data) {
+        this.code = code;
+        this.message = message;
         this.data = data;
     }
 
@@ -65,29 +71,6 @@ public class BaseResponse<T> {
         return new BaseResponse<>(resultCode);
     }
 
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
-    public void setMessage(String message) {
-        this.message = message;
-    }
-
-    public T getData() {
-        return data;
-    }
-
-    public void setData(T data) {
-        this.data = data;
-    }
 
     /** 将当前响应设置为成功状态。 */
     public void success(T data) {
