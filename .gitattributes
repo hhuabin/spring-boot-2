@@ -1,2 +1,40 @@
-/mvnw text eol=lf
-*.cmd text eol=crlf
+# Normalize every detected text file and keep LF in both the repository and
+# working tree. This rule takes precedence over a local core.autocrlf setting.
+* text=auto eol=lf
+
+# Explicit text formats used by this project.
+*.java       text eol=lf
+*.xml        text eol=lf
+*.yml        text eol=lf
+*.yaml       text eol=lf
+*.properties text eol=lf
+*.sql        text eol=lf
+*.md         text eol=lf
+*.sh         text eol=lf
+*.cmd        text eol=crlf
+*.bat        text eol=crlf
+mvnw         text eol=lf
+
+# Git configuration files.
+.gitattributes text eol=lf
+.gitignore     text eol=lf
+
+# Images.
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+
+# Documents, archives, compiled files, and fonts.
+*.pdf   binary
+*.zip   binary
+*.gz    binary
+*.tar   binary
+*.7z    binary
+*.jar   binary
+*.class binary
+*.woff  binary
+*.woff2 binary
+*.ttf   binary

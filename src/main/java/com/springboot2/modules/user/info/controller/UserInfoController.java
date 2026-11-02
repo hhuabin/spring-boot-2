@@ -1,28 +1,29 @@
-package com.springboot2.modules.user.controller;
+package com.springboot2.modules.user.info.controller;
 
 import com.springboot2.common.enums.ResultCode;
 import com.springboot2.common.response.BaseResponse;
-import com.springboot2.modules.user.entity.UserInfo;
-import com.springboot2.modules.user.dto.UserInfoDTO;
-import com.springboot2.modules.user.service.UserInfoService;
-import com.springboot2.modules.user.vo.UserInfoVO;
-import com.springboot2.modules.user.vo.UserNameVO;
+import com.springboot2.modules.user.info.entity.UserInfo;
+import com.springboot2.modules.user.info.dto.UserInfoDTO;
+import com.springboot2.modules.user.info.service.UserInfoService;
+import com.springboot2.modules.user.info.vo.UserInfoVO;
+import com.springboot2.modules.user.info.vo.UserNameVO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * @author hhuabin
  * @date 2026-10-10 11:05
  */
+@Slf4j
 @CrossOrigin(origins = "*")       // 临时使用，上线需要在 nginx 配跨域
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/user/info")
 public class UserInfoController {
 
-    private final UserInfoService userInfoService;
-
-    public UserInfoController(UserInfoService userInfoService) {
-        this.userInfoService = userInfoService;
-    }
+    @Resource
+    private UserInfoService  userInfoService;
 
     @PostMapping("/getUserInfoById")
     public BaseResponse<UserInfoVO> getUserInfoById(@RequestBody UserInfoDTO request) {

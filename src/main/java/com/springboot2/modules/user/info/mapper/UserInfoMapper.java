@@ -1,7 +1,7 @@
-package com.springboot2.modules.user.mapper;
+package com.springboot2.modules.user.info.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.springboot2.modules.user.entity.UserInfo;
+import com.springboot2.modules.user.info.entity.UserInfo;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

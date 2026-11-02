@@ -1,4 +1,4 @@
-package com.springboot2.modules.user.entity;
+package com.springboot2.modules.user.info.entity;
 
 /**
  * @author hhuabin

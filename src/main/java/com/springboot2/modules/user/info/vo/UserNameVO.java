@@ -1,6 +1,6 @@
-package com.springboot2.modules.user.vo;
+package com.springboot2.modules.user.info.vo;
 
-import com.springboot2.modules.user.entity.UserInfo;
+import com.springboot2.modules.user.info.entity.UserInfo;
 import lombok.Getter;
 import lombok.Setter;
 
