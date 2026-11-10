@@ -28,7 +28,7 @@ class UserAuthServiceImplTest {
 
     @Test
     void loginShouldReturnTokenAndUserInfoWhenCredentialsAreCorrect() {
-        when(userInfoService.getByUserName("alice")).thenReturn(userInfo(1L, "alice"));
+        when(userInfoService.getUserInfoByUserName("alice")).thenReturn(userInfo(1L, "alice"));
 
         LoginVO loginVO = userAuthService.login(loginDTO("alice", "secret"));
 
@@ -40,14 +40,14 @@ class UserAuthServiceImplTest {
 
     @Test
     void loginShouldReturnNullWhenUserDoesNotExist() {
-        when(userInfoService.getByUserName("bob")).thenReturn(null);
+        when(userInfoService.getUserInfoByUserName("bob")).thenReturn(null);
 
         assertNull(userAuthService.login(loginDTO("bob", "secret")));
     }
 
     @Test
     void loginShouldReturnNullWhenPasswordIsIncorrect() {
-        when(userInfoService.getByUserName("alice")).thenReturn(userInfo(1L, "alice"));
+        when(userInfoService.getUserInfoByUserName("alice")).thenReturn(userInfo(1L, "alice"));
 
         assertNull(userAuthService.login(loginDTO("alice", "wrong")));
     }

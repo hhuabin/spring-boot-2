@@ -31,7 +31,7 @@ public class UserAuthServiceImpl implements UserAuthService {
 
     @Override
     public LoginVO login(UserLoginDTO request) {
-        UserInfo userInfo = userInfoService.getByUserName(request.getUserName());
+        UserInfo userInfo = userInfoService.getUserInfoByUserName(request.getUserName());
 
         // 用户不存在和密码不正确使用相同提示，避免泄露用户名是否存在。
         if (userInfo == null || !Objects.equals(userInfo.getPassword(), request.getPassword())) {

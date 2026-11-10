@@ -1,6 +1,6 @@
 package com.springboot2.modules.user.info.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.spring.service.IService;
 import com.springboot2.modules.user.info.entity.UserInfo;
 
 /**
@@ -15,5 +15,5 @@ public interface UserInfoService extends IService<UserInfo> {
      * @param userName 用户名
      * @return 用户实体，不存在时返回 null
      */
-    UserInfo getByUserName(String userName);
+    UserInfo getUserInfoByUserName(String userName);
 }

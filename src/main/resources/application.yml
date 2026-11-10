@@ -1,3 +1,17 @@
 spring:
   profiles:
     active: dev
+
+
+mybatis-plus:
+  # Mapper XML 文件位置
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+  # 实体类包路径（配置后 XML 中可以直接使用类名）
+  type-aliases-package: com.springboot2.modules.user.info.entity
+
+  configuration:
+    # 数据库字段下划线自动映射 Java 驼峰属性（默认开启）
+    map-underscore-to-camel-case: true
+    # 开启 SQL 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
