@@ -1,12 +1,11 @@
-package com.springboot2.modules.user.auth.service.impl;
+package com.springboot2.modules.user.service.auth.impl;
 
-import com.springboot2.common.enums.ResultCode;
-import com.springboot2.modules.user.auth.dto.UserLoginDTO;
-import com.springboot2.modules.user.auth.service.UserAuthService;
-import com.springboot2.modules.user.auth.vo.LoginVO;
-import com.springboot2.modules.user.info.entity.UserInfo;
-import com.springboot2.modules.user.info.service.UserInfoService;
-import com.springboot2.modules.user.info.vo.UserInfoVO;
+import com.springboot2.modules.user.dto.auth.UserLoginDTO;
+import com.springboot2.modules.user.service.auth.UserAuthService;
+import com.springboot2.modules.user.vo.auth.LoginVO;
+import com.springboot2.modules.user.entity.info.UserInfo;
+import com.springboot2.modules.user.service.info.UserInfoService;
+import com.springboot2.modules.user.vo.info.UserInfoVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

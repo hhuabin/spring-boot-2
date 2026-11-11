@@ -1,7 +1,8 @@
 package com.springboot2.modules.user.info.service.impl;
 
-import com.springboot2.modules.user.info.entity.UserInfo;
-import com.springboot2.modules.user.info.mapper.UserInfoMapper;
+import com.springboot2.modules.user.entity.info.UserInfo;
+import com.springboot2.modules.user.mapper.info.UserInfoMapper;
+import com.springboot2.modules.user.service.info.impl.UserInfoServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

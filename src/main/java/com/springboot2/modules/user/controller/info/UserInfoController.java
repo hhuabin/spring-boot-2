@@ -1,12 +1,12 @@
-package com.springboot2.modules.user.info.controller;
+package com.springboot2.modules.user.controller.info;
 
 import com.springboot2.common.enums.ResultCode;
 import com.springboot2.common.response.BaseResponse;
-import com.springboot2.modules.user.info.entity.UserInfo;
-import com.springboot2.modules.user.info.dto.UserInfoDTO;
-import com.springboot2.modules.user.info.service.UserInfoService;
-import com.springboot2.modules.user.info.vo.UserInfoVO;
-import com.springboot2.modules.user.info.vo.UserNameVO;
+import com.springboot2.modules.user.entity.info.UserInfo;
+import com.springboot2.modules.user.dto.info.UserInfoDTO;
+import com.springboot2.modules.user.service.info.UserInfoService;
+import com.springboot2.modules.user.vo.info.UserInfoVO;
+import com.springboot2.modules.user.vo.info.UserNameVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +25,11 @@ public class UserInfoController {
     @Resource
     private UserInfoService  userInfoService;
 
+    /**
+     * 根据用户 id 获取用户信息
+     * @param request 用户信息查询请求参数
+     * @return 用户信息
+     */
     @PostMapping("/getUserInfoById")
     public BaseResponse<UserInfoVO> getUserInfoById(@RequestBody UserInfoDTO request) {
         BaseResponse<UserInfoVO> response = new BaseResponse<>();
@@ -44,6 +49,11 @@ public class UserInfoController {
         return response;
     }
 
+    /**
+     * 根据用户 id 获取用户名字
+     * @param userId 用户 id
+     * @return 用户名
+     */
     @GetMapping("/getUserNameById")
     public BaseResponse<UserNameVO> getUserNameById(@RequestParam("userId") Long userId) {
         BaseResponse<UserNameVO> response = new BaseResponse<>();

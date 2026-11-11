@@ -1,10 +1,10 @@
-package com.springboot2.modules.user.auth.controller;
+package com.springboot2.modules.user.controller.auth;
 
 import com.springboot2.common.enums.ResultCode;
 import com.springboot2.common.response.BaseResponse;
-import com.springboot2.modules.user.auth.dto.UserLoginDTO;
-import com.springboot2.modules.user.auth.service.UserAuthService;
-import com.springboot2.modules.user.auth.vo.LoginVO;
+import com.springboot2.modules.user.dto.auth.UserLoginDTO;
+import com.springboot2.modules.user.service.auth.UserAuthService;
+import com.springboot2.modules.user.vo.auth.LoginVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;

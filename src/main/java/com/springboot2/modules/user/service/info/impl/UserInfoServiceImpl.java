@@ -1,10 +1,10 @@
-package com.springboot2.modules.user.info.service.impl;
+package com.springboot2.modules.user.service.info.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.spring.service.impl.ServiceImpl;
-import com.springboot2.modules.user.info.entity.UserInfo;
-import com.springboot2.modules.user.info.mapper.UserInfoMapper;
-import com.springboot2.modules.user.info.service.UserInfoService;
+import com.springboot2.modules.user.entity.info.UserInfo;
+import com.springboot2.modules.user.mapper.info.UserInfoMapper;
+import com.springboot2.modules.user.service.info.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,7 +21,7 @@ public class UserInfoServiceImpl extends ServiceImpl<UserInfoMapper, UserInfo> i
     @Override
     public UserInfo getUserInfoByUserName(String userName) {
         LambdaQueryWrapper<UserInfo> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(UserInfo::getUserName,userName);
+        wrapper.eq(UserInfo::getUserName, userName);
 
         return userInfoMapper.selectOne(wrapper);
     }

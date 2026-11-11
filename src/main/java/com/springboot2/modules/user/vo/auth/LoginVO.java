@@ -1,8 +1,9 @@
-package com.springboot2.modules.user.auth.vo;
+package com.springboot2.modules.user.vo.auth;
 
-import com.springboot2.modules.user.info.vo.UserInfoVO;
+import com.springboot2.modules.user.vo.info.UserInfoVO;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author hhuabin
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 public class LoginVO {
     /**
      * 访问令牌

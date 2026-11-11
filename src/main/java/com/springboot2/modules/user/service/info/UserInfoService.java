@@ -1,7 +1,7 @@
-package com.springboot2.modules.user.info.service;
+package com.springboot2.modules.user.service.info;
 
 import com.baomidou.mybatisplus.spring.service.IService;
-import com.springboot2.modules.user.info.entity.UserInfo;
+import com.springboot2.modules.user.entity.info.UserInfo;
 
 /**
  * @author hhuabin

@@ -1,4 +1,4 @@
-package com.springboot2.modules.user.info.entity;
+package com.springboot2.modules.user.entity.info;
 
 /**
  * @author hhuabin
@@ -11,6 +11,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
+@ToString
 @TableName("user")
 public class UserInfo {
 

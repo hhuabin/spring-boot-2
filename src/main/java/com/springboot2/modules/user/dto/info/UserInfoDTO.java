@@ -1,4 +1,4 @@
-package com.springboot2.modules.user.info.dto;
+package com.springboot2.modules.user.dto.info;
 
 import com.springboot2.common.request.BaseRequest;
 import lombok.Getter;

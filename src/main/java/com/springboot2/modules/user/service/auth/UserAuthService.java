@@ -1,7 +1,7 @@
-package com.springboot2.modules.user.auth.service;
+package com.springboot2.modules.user.service.auth;
 
-import com.springboot2.modules.user.auth.dto.UserLoginDTO;
-import com.springboot2.modules.user.auth.vo.LoginVO;
+import com.springboot2.modules.user.dto.auth.UserLoginDTO;
+import com.springboot2.modules.user.vo.auth.LoginVO;
 
 /**
  * @description 用户认证服务：登录、token 等与凭证相关的业务。

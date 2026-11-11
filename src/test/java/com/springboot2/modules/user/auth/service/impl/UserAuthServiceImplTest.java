@@ -1,9 +1,10 @@
 package com.springboot2.modules.user.auth.service.impl;
 
-import com.springboot2.modules.user.auth.dto.UserLoginDTO;
-import com.springboot2.modules.user.auth.vo.LoginVO;
-import com.springboot2.modules.user.info.entity.UserInfo;
-import com.springboot2.modules.user.info.service.UserInfoService;
+import com.springboot2.modules.user.dto.auth.UserLoginDTO;
+import com.springboot2.modules.user.service.auth.impl.UserAuthServiceImpl;
+import com.springboot2.modules.user.vo.auth.LoginVO;
+import com.springboot2.modules.user.entity.info.UserInfo;
+import com.springboot2.modules.user.service.info.UserInfoService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

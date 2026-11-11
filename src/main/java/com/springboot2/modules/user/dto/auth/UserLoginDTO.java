@@ -1,4 +1,4 @@
-package com.springboot2.modules.user.auth.dto;
+package com.springboot2.modules.user.dto.auth;
 
 import com.springboot2.common.request.BaseRequest;
 import lombok.Getter;

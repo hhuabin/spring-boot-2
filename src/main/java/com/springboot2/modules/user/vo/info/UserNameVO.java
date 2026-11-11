@@ -1,8 +1,9 @@
-package com.springboot2.modules.user.info.vo;
+package com.springboot2.modules.user.vo.info;
 
-import com.springboot2.modules.user.info.entity.UserInfo;
+import com.springboot2.modules.user.entity.info.UserInfo;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author hhuabin
@@ -11,6 +12,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
+@ToString
 public class UserNameVO {
 
     private String userName;
